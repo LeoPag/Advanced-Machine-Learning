@@ -6,6 +6,7 @@ This repo contains the projects for the course Advanced Machine Learning at ETH 
 Project 0 is a dummy task to help student familirize with the course framework. We were asked to read the features and to regress the mean.
 
 ## Project 1: Predict the age of a person from their MRI scan
+<img align="right" width="400" height="400" src="Images/mri.webp">
 This project is a regression task where we were askedd to predict a patient age from some MRI features. The original MRI features were perturbed in several ways. We needed to perform outliers detection, feature selection, and other preprocessing to achieve the best result.
 
 The task1 was to predict a person’s age from the brain image data: a standard regression problem. The original dataset included 832 features as well as a lot of NaN values and a few outliers. A good preprocessing stage was necessary in order to have a well defined dataset that could be used in our regression model. The first step is the imputation of the dataset. At first a simple median imputation was performed. Then we decided to opt for a K-Nearest-Neighbour imputation that achieved better validation results.
@@ -14,7 +15,7 @@ A lot of outlier detection techniques were used but we decided to keep the outli
 Our final predictor was an ensemble of: Multi-Layer-Perceptron, XGBoost, SupportVectorRegression,RandomForest. The R2 score of the model was 0.76 on the public leaderboard and 0.71 on the private one.
 
 ## Project 2: Heartbeat multi-class classification on ECG signals
-
+<img align="right" width="400" height="400" src="Images/ecg.webp">
 This is a classification task where we were asked to map each ECG signal to one of 4 possible classes: Normal (0), AFib (1), Other Rhythm (2), and Noisy Recording (3).
 
 One of the main challenges was to deal with class imbalance: in order to fix the unbalanced classes different techniques were used including upsam- pling of the classes with lower number of samples and downsampling of the class with higher number of samples. All of these techniques were outperformed though by using different weights for the penalty term during the training of our classification model. However, the best results were achieved by permorming learning in "cascade" fashion: first we distinguish between class 0 and class "not 0". Among the "class not 0 samples", we distinguish between class 1 and class "not 1". Among the "class not 1 samples", we classify between class 2 and 3. 

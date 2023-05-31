@@ -1,4 +1,4 @@
-# Advanced-Machine-Learning
+# Advanced Machine Learning
 This repo contains the projects for the course Advanced Machine Learning at ETH Zurich. The projects resemble Kaggle data science competitions. We were given training data and were asked to make predictions on out of sample data. Our models were evaluated both on a public leaderboard and on a private leaderboard.
 
 
